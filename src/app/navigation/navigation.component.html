@@ -12,11 +12,11 @@
               <div class="navbar">
                 <div class="nav-collapse">
                   <ul class="nav nav-pills ddmenu">
-                    <li class="dropdown"><a href="index.html">Home</a></li>
-                    <li class="dropdown"><a href="#">my skills</a></li>
-                    <li class="dropdown"><a href="#">my sandbox</a></li>
-                    <li class="dropdown"><a href="#">projects</a></li>
-                    <li class="dropdown"><a href="#">portfolio</a></li>
+                    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="dropdown"><a routerLink="">Home</a></li>
+                    <li routerLinkActive="active" class="dropdown"><a routerLink="/skills">my skills</a></li>
+                    <li routerLinkActive="active" class="dropdown"><a routerLink="/sandbox">my sandbox</a></li>
+                    <li routerLinkActive="active" class="dropdown"><a routerLink="/projects">projects</a></li>
+                    <li routerLinkActive="active" class="dropdown"><a routerLink="/port">portfolio</a></li>
                   </ul>
                 </div>
               </div>
