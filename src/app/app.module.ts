@@ -14,7 +14,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { SandboxComponent } from './pages/sandbox/sandbox.component';
-import {NgbdCarouselConfig } from './pages/skills/carousel/carousel.component';
+import {DemoCarouselMultilistComponent } from './pages/skills/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -24,19 +24,19 @@ import {NgbdCarouselConfig } from './pages/skills/carousel/carousel.component';
     FooterComponent,
     HomeComponent,
     SkillsComponent,
-    NgbdCarouselConfig,
     BlogComponent,
     PortfolioComponent,
     ProjectsComponent,
-    SandboxComponent
+    SandboxComponent,
+    DemoCarouselMultilistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule
   ],
-  exports: [NgbdCarouselConfig],
-  providers: [NgbdCarouselConfig],
-  bootstrap: [AppComponent, NgbdCarouselConfig]
+  exports: [DemoCarouselMultilistComponent],
+  providers: [],
+  bootstrap: [AppComponent, DemoCarouselMultilistComponent]
 })
 export class AppModule { }
