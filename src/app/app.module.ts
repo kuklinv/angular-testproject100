@@ -10,11 +10,11 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SkillsComponent } from './pages/skills/skills.component';
-import { NgbdCarouselBasic } from './pages/skills/carousel/carousel.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { SandboxComponent } from './pages/sandbox/sandbox.component';
+import {NgbdCarouselConfig } from './pages/skills/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { SandboxComponent } from './pages/sandbox/sandbox.component';
     FooterComponent,
     HomeComponent,
     SkillsComponent,
-    NgbdCarouselBasic,
+    NgbdCarouselConfig,
     BlogComponent,
     PortfolioComponent,
     ProjectsComponent,
@@ -35,8 +35,8 @@ import { SandboxComponent } from './pages/sandbox/sandbox.component';
     AppRoutingModule,
     NgbModule
   ],
-  exports: [NgbdCarouselBasic],
-  providers: [],
-  bootstrap: [AppComponent, NgbdCarouselBasic]
+  exports: [NgbdCarouselConfig],
+  providers: [NgbdCarouselConfig],
+  bootstrap: [AppComponent, NgbdCarouselConfig]
 })
 export class AppModule { }
