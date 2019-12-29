@@ -14,7 +14,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { SandboxComponent } from './pages/sandbox/sandbox.component';
-import {DemoCarouselMultilistComponent } from './pages/skills/carousel/carousel.component';
+import {MultiItemCarouselComponent } from './pages/skills/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -28,15 +28,15 @@ import {DemoCarouselMultilistComponent } from './pages/skills/carousel/carousel.
     PortfolioComponent,
     ProjectsComponent,
     SandboxComponent,
-    DemoCarouselMultilistComponent
+    MultiItemCarouselComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule
   ],
-  exports: [DemoCarouselMultilistComponent],
-  providers: [],
-  bootstrap: [AppComponent, DemoCarouselMultilistComponent]
+  exports: [MultiItemCarouselComponent],
+  providers: [MultiItemCarouselComponent],
+  bootstrap: [AppComponent, MultiItemCarouselComponent]
 })
 export class AppModule { }

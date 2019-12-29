@@ -1,7 +1,7 @@
 /*@import "~assets/fontawesome/css/font-awesome.css";*/
 /*@import "src/styles.css";*/
-.carouselImage { min-width:100%; max-width:100%; }
-::ng-deep .container-fluid { padding:0 !important; }
+/* .carouselImage { min-width:100%; max-width:100%; }
+::ng-deep .container-fluid { padding:0 !important; } */
 
 /*
 первый гарантирует, что ширина составляет 100% независимо от размера изображения ... для заполнения, мы просто перезаписываем отступы, которые были там из-за container-fluidкласса

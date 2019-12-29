@@ -1,24 +1,17 @@
-<carousel [itemsPerSlide]="itemsPerSlide"
-          [singleSlideOffset]="singleSlideOffset"
-          [noWrap]="!noWrap"
-          [interval]="false"
-          [startFromIndex]="5"
-          (slideRangeChange)="onSlideRangeChange($event)">
-  <slide *ngFor="let slide of slides; let index=index">
-    <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
-    <div class="carousel-caption">
-      <h4>Slide {{index}}</h4>
+<mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+  [animation]="'slide'">
+  <mdb-carousel-item *ngFor="let item of slides; let i = index">
+    <div class="col-md-4" [ngClass]="{'d-none d-md-block': cardIndex !== 0}" *ngFor="let card of item; let cardIndex = index">
+      <mdb-card class="my-1">
+        <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h4>{{card.title}}</h4>
+          </mdb-card-title>
+          <p>{{card.description}}</p>
+          <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect>{{card.buttonText}}</a>
+        </mdb-card-body>
+      </mdb-card>
     </div>
-  </slide>
-</carousel>
- 
-<div class="container" [ngStyle]="{'marginTop': '20px'}">
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" [(ngModel)]="noWrap">
-      Infinite
-    </label>
-  </div>
-</div>
- 
-<pre class="card card-block card-header">{{slidesChangeMessage}}</pre>
+  </mdb-carousel-item>
+</mdb-carousel>
